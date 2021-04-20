@@ -21,8 +21,10 @@ function ProfileScreen() {
           <div className="profileScreen_details">
             <h2>{user.email}</h2>
             <div className="profileScreen_plans">
+              <h3>Plans (Current Plan: Premium)</h3>
+              <p></p>
               <button
-                onClick={() => auth.signOut()}
+                onClick={() => auth.signOut()} //firebase method that changes user state to null
                 className="profileScreen_signOut"
               >
                 Sign Out
