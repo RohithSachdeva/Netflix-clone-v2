@@ -15,7 +15,6 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
     fetchData();
   }, [fetchUrl]);
 
-  console.log(movies);
   //Whenever you use a variable that is not found in the useEffect, you need to put it into the dependancy array at the end of the function.
 
   return (

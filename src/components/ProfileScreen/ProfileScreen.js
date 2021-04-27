@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../../features/userSlice";
 import { auth } from "../../firebase/firebase";
 import NavBar from "../NavBar/NavBar";
+import PlansScreen from "../PlansScreen/PlansScreen";
 import "./ProfileScreen.css";
 
 function ProfileScreen() {
@@ -21,8 +22,8 @@ function ProfileScreen() {
           <div className="profileScreen_details">
             <h2>{user.email}</h2>
             <div className="profileScreen_plans">
-              <h3>Plans (Current Plan: Premium)</h3>
-              <p></p>
+              <h3>Plans</h3>
+              <PlansScreen />
               <button
                 onClick={() => auth.signOut()} //firebase method that changes user state to null
                 className="profileScreen_signOut"
